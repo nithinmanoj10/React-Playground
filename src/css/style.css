@@ -32,64 +32,159 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
-.header {
-  width: 100%;
-  border: 0.5px solid #cfcfcf;
+header {
+  background-color: #20232a;
 }
 
-.header__nav {
+.planets {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  width: 90%;
+  flex-direction: column;
+  width: 85%;
   margin: 0 auto;
-  padding: 10px 0;
 }
 
-.header__nav .day {
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 700;
+.planets__heading {
+  margin: 10px 0;
 }
 
-.header__nav .date {
-  font-weight: 100;
-  font-size: 14px;
-  margin: 0 5px;
-  flex: 1;
+.planets__info {
+  margin: 10px 0;
 }
 
-.header__nav .search {
-  display: block;
+.planets__list {
+  list-style: decimal;
+  margin: 10px 0;
+  padding-left: 20px;
+  width: 120px;
+  border-right: 1px solid #000;
 }
 
-.main {
-  width: 90%;
-  margin: 20px auto;
+.planets__list__item {
+  margin-bottom: 8px;
 }
 
-.todo-item {
+.planets__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 0 10px;
+  margin: 40px auto;
+}
+
+.planets__grid .planet {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 30px;
 }
 
-.todo-item:not(.todo-item:last-child) {
+.planets__grid .planet__name {
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
-.todo-item__info {
-  margin-left: 10px;
-}
-
-.todo-item__info__name {
-  font-weight: 700;
+.planets__grid .planet__description {
   font-size: 14px;
+  width: 45ch;
+  line-height: 1.5;
+  color: #313131;
+  margin-bottom: 30px;
 }
 
-.todo-item__info__time {
-  font-weight: 100;
+.planets__grid .planet__facts {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.planets__grid .planet__facts__item__name {
+  font-size: 14px;
+  color: #313131;
+}
+
+.planets__grid .planet__facts__item__value {
   font-size: 12px;
-  color: #8d8d8d;
+  color: #6b6b6b;
+}
+
+.nav {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.nav h1 {
+  color: #61dafb;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 500px;
+}
+
+.nav__list__item__link {
+  padding: 20px 10px;
+}
+
+.nav__list__item__link:hover {
+  color: #61dafb;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  width: 85%;
+  margin: 60px auto;
+}
+
+.features__box__title {
+  color: #b9b9b9;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.features__box__description {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #20232a;
+  height: 100px;
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .go-to-link {
+  font-weight: 400;
+  color: #61dafb;
+  padding: 15px 15px;
+  transition: all 0.3s;
+}
+
+.footer .go-to-link:hover {
+  color: #fff;
+}
+
+.footer .button {
+  background-color: #61dafb;
+  padding: 15px 15px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.footer .button:hover {
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 import React from "react";
 
 import NavList from "./NavList";
-import "../css/style.css";
+import "../../css/style.css";
 
 function Header() {
   return (

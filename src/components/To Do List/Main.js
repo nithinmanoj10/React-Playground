@@ -6,9 +6,24 @@ import TodoItem from "./TodoItem";
 function Main() {
   return (
     <div className="main">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      <TodoItem
+        todo={{
+          name: "Laundry",
+          time: "08:00 AM",
+        }}
+      />
+      <TodoItem
+        todo={{
+          name: "Lunch",
+          time: "02:00 PM",
+        }}
+      />
+      <TodoItem
+        todo={{
+          name: "Workout",
+          time: "05:00 PM",
+        }}
+      />
     </div>
   );
 }

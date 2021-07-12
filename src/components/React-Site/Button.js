@@ -1,9 +1,9 @@
 import React from "react";
 
-function Button() {
+function Button(props) {
   return (
     <a href="javascript:void(0)" className="button">
-      Get Started
+      {props.button.text}
     </a>
   );
 }
