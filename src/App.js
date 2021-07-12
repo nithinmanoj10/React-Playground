@@ -1,15 +1,13 @@
 import React from "react";
 
-import Header from "./components/Header";
-import Features from "./components/Features";
-import Footer from "./components/Footer";
+import Header from "./components/To Do List/Header";
+import Main from "./components/To Do List/Main";
 
 function App() {
   return (
     <div>
       <Header />
-      <Features />
-      <Footer />
+      <Main />
     </div>
   );
 }
