@@ -1,16 +1,24 @@
-import React from "react";
 import "../../css/style.css";
 
-function TodoItem(props) {
-  return (
-    <div className="todo-item">
-      <input type="checkbox"></input>
-      <div className="todo-item__info">
-        <h4 className="todo-item__info__name">{props.todo.name}</h4>
-        <p className="todo-item__info__time">{props.todo.time}</p>
-      </div>
-    </div>
-  );
-}
+import React, { Component } from "react";
+import todosData from "./todosData";
 
-export default TodoItem;
+export default class TodoItem extends Component {
+  render() {
+    return (
+      <div className="todo-item">
+        <input
+          type="checkbox"
+          checked={this.props.task.completed}
+          onChange={() => {
+            this.props.handleChange(this.props.task.id);
+          }}
+        ></input>
+        <div className="todo-item__info">
+          <h4 className="todo-item__info__name">{this.props.task.text}</h4>
+          <p className="todo-item__info__time">{this.props.task.time}</p>
+        </div>
+      </div>
+    );
+  }
+}

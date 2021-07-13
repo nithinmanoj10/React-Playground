@@ -1,31 +1,57 @@
-import React from "react";
 import "../../css/style.css";
 
 import TodoItem from "./TodoItem";
+import todosData from "./todosData";
 
-function Main() {
-  return (
-    <div className="main">
-      <TodoItem
-        todo={{
-          name: "Laundry",
-          time: "08:00 AM",
-        }}
-      />
-      <TodoItem
-        todo={{
-          name: "Lunch",
-          time: "02:00 PM",
-        }}
-      />
-      <TodoItem
-        todo={{
-          name: "Workout",
-          time: "05:00 PM",
-        }}
-      />
-    </div>
-  );
+import React, { Component } from "react";
+
+export default class Main extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      todos: todosData,
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(id) {
+    this.setState((prevState) => {
+      const updatedTodo = prevState.todos.map(function (item) {
+        if (item.id === id) {
+          item.completed = !item.completed;
+        }
+        return item;
+      });
+      return {
+        todos: updatedTodo,
+      };
+    });
+  }
+
+  render() {
+    // console.log(this);
+    const TodoItemJSX = this.state.todos.map((item) => {
+      return (
+        <TodoItem key={item.id} task={item} handleChange={this.handleChange} />
+      );
+    });
+
+    return <div className="main">{TodoItemJSX}</div>;
+  }
 }
 
-export default Main;
+// function Main() {
+//   const handleClick = function () {
+//     console.log("Hello yam");
+//   };
+
+//   const TodoItemJSX = todosData.map(function (task) {
+//     return <TodoItem key={task.id} task={task} onMouseOver={handleClick} />;
+//   });
+
+//   return <div className="main">{TodoItemJSX}</div>;
+// }
+
+// export default Main;
