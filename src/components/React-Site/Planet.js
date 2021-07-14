@@ -1,4 +1,5 @@
 import Facts from "./Facts";
+import Section from "./Section";
 
 import React, { Component } from "react";
 
@@ -41,19 +42,8 @@ export default class Planet extends Component {
         <h2 className="planet__name">{this.state.name}</h2>
         <p className="planet__description">{this.state.description}</p>
         <Facts fact={this.state.facts} />
+        <Section />
       </div>
     );
   }
 }
-
-// function Planet(props) {
-//   return (
-//     <div className="planet">
-//       <h2 className="planet__name">{props.planet.name}</h2>
-//       <p className="planet__description">{props.planet.overview.content}</p>
-//       <Facts fact={props.planet} />
-//     </div>
-//   );
-// }
-
-// export default Planet;

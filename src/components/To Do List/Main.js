@@ -31,7 +31,6 @@ export default class Main extends Component {
   }
 
   render() {
-    // console.log(this);
     const TodoItemJSX = this.state.todos.map((item) => {
       return (
         <TodoItem key={item.id} task={item} handleChange={this.handleChange} />
@@ -41,17 +40,3 @@ export default class Main extends Component {
     return <div className="main">{TodoItemJSX}</div>;
   }
 }
-
-// function Main() {
-//   const handleClick = function () {
-//     console.log("Hello yam");
-//   };
-
-//   const TodoItemJSX = todosData.map(function (task) {
-//     return <TodoItem key={task.id} task={task} onMouseOver={handleClick} />;
-//   });
-
-//   return <div className="main">{TodoItemJSX}</div>;
-// }
-
-// export default Main;
