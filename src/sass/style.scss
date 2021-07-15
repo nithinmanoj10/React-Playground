@@ -335,50 +335,79 @@ a {
 // }
 
 // IP ADDRESS
+// .container {
+//   position: absolute;
+//   top: 40%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+
+//   display: flex;
+//   flex-direction: column;
+//   text-align: center;
+
+//   h1 {
+//     margin-bottom: 10px;
+//   }
+
+//   h3,
+//   h4 {
+//     font-weight: 100;
+//     color: #4b4b4b;
+//   }
+
+//   form {
+//     margin-bottom: 60px;
+
+//     display: flex;
+//     justify-content: center;
+
+//     .input__ip {
+//       border: 1px solid #f0f0f0;
+//       padding: 5px 10px;
+//       border-radius: 5px 0 0 5px;
+
+//       &:focus {
+//         outline: none;
+//       }
+//     }
+
+//     button {
+//       border-radius: 0 5px 5px 0;
+//       border: none;
+//       padding: 0 5px;
+//     }
+//   }
+
+//   .error-message {
+//     color: #ff0000;
+//   }
+// }
+
+////////////////////////////////////////////////
+// MEME GENERATOR
+
 .container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  .meme {
+    width: 80%;
+    height: 390px;
+    border: 1px solid #000;
 
-  h1 {
-    margin-bottom: 10px;
-  }
-
-  h3,
-  h4 {
-    font-weight: 100;
-    color: #4b4b4b;
-  }
-
-  form {
-    margin-bottom: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
 
     display: flex;
     justify-content: center;
 
-    .input__ip {
-      border: 1px solid #f0f0f0;
-      padding: 5px 10px;
-      border-radius: 5px 0 0 5px;
-
-      &:focus {
-        outline: none;
-      }
+    &__image {
+      object-fit: cover;
+      height: 100%;
+      width: auto;
+      overflow-x: hidden;
     }
-
-    button {
-      border-radius: 0 5px 5px 0;
-      border: none;
-      padding: 0 5px;
-    }
-  }
-
-  .error-message {
-    color: #ff0000;
   }
 }

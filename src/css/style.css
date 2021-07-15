@@ -33,48 +33,26 @@ a {
 }
 
 .container {
+  width: 100%;
+  height: 100vh;
+}
+
+.container .meme {
+  width: 80%;
+  height: 390px;
+  border: 1px solid #000;
   position: absolute;
-  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.container h1 {
-  margin-bottom: 10px;
-}
-
-.container h3,
-.container h4 {
-  font-weight: 100;
-  color: #4b4b4b;
-}
-
-.container form {
-  margin-bottom: 60px;
+  bottom: 50px;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
 }
 
-.container form .input__ip {
-  border: 1px solid #f0f0f0;
-  padding: 5px 10px;
-  border-radius: 5px 0 0 5px;
-}
-
-.container form .input__ip:focus {
-  outline: none;
-}
-
-.container form button {
-  border-radius: 0 5px 5px 0;
-  border: none;
-  padding: 0 5px;
-}
-
-.container .error-message {
-  color: #ff0000;
+.container .meme__image {
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=style.css.map */
