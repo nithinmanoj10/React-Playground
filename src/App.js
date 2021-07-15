@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./css/style.css";
 
-import Meme from "./components/Meme Generator/Meme";
-
+import Container from "./components/Meme Generator/Container";
+import Header from "./components/Meme Generator/Header";
 export default class App extends Component {
   render() {
     return (
-      <div className="container">
-        <Meme />
+      <div>
+        <Header />
+        <Container />
       </div>
     );
   }
